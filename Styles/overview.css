@@ -1068,8 +1068,8 @@ body {
   #chart-two,
   #appointments,
   #chart-radar {
-    width: 100% !important;
-    max-width: 100%;
+    width: 70% !important;
+    max-width: 60%;
     overflow: hidden;
   }
 
