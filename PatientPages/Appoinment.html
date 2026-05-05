@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/Appoinment.css" /> 
+        <link rel="stylesheet" href="../Styles/Mode.css" />
+
+    <link 
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Appoinment Patient</title>
+  </head> 
+  <body> 
+    <aside class="sidebar close">
+      <!-- LOGO -->
+      <div class="logo" id="sidebarToggle">
+        <img src="../images/Group 53.png" alt="" />
+        <span class="logo-text">Iwosan</span>
+      </div>
+
+      <!-- MENU -->
+      <ul class="menu">
+        <li>
+          <a href="./overview.html">
+            <img src="../images/Group (1).png" />
+            <span>Overview</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Appoinment.html">
+            <img src="../images/Groupappoinment.png" />
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Doctore.html">
+            <img src="../images/Grouppatiet.png" />
+            <span>Doctors</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Chats.html">
+            <img src="../images/Group (4).png" />
+            <span>Chats</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Setting.html">
+            <img src="../images/Group (6).png" />
+            <span>Settings</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Logout.html" class="logout">
+            <img src="../images/Group (7).png" />
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- EMERGENCY -->
+      <div class="emergency">
+        <div class="circle">
+          <img src="../images/Group (8).png" />
+        </div>
+
+        <div class="emergency-text">
+          <p>Emergency Hotlines</p>
+          <span>+234 92 928 2891</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="header">
+      <input type="text" placeholder="Search pathology results" />
+      <div class="div-icon">
+        <i class="fa-regular fa-bell"></i>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="profile-info">
+        <img  id="userImage" src="../images/Portrait of Young Woman.png" />
+        <div class="profule-text">
+          <h5 id="userName">Menna Fathalla</h5>
+          <p id="userRole">Patient</p>
+        </div>
+      </div>
+    </div>  
+
+    <!-- Welcome div -->
+    <div class="welcome-mode">
+      <div class="welcome-div">
+        <p class="name">Appoinment</p>
+      </div>
+
+      <div class="mode">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" class="theme-switch">
+          <span class="icon sun">☀</span>
+          <span class="icon moon">🌙</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="calendar-container">
+      <div class="calendar-top">
+        <button id="prevMonth">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <h3 id="monthYear"></h3>
+ 
+        <button id="nextMonth">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="calendar-grid">
+        <!-- days names -->
+        <div class="day-name">Mon</div>
+        <div class="day-name">Tue</div>
+        <div class="day-name">Wed</div>
+        <div class="day-name">Thu</div>
+        <div class="day-name">Fri</div>
+        <div class="day-name">Sat</div>
+        <div class="day-name">Sun</div>
+        <!-- days will be generated here -->
+      </div>
+    </div> 
+
+    <form class="appointment-form">
+      <h2>Book an Appointment</h2>
+
+      <div class="form-group"> 
+        <label for="name">Patient Name *</label>
+        <input type="text" id="name" placeholder="Patient Name" required />
+      </div> 
+
+      <div class="form-group">
+        <label for="department">Department</label>
+        <select id="department">
+          <option>Eye Care</option> 
+          <option>Dental</option>
+          <option>Cardiology</option>  
+          <option>Gyneco</option>  
+          <option>Psycho</option>
+          <option>Urologist</option>
+          <option>Neurologist</option>
+        </select>
+      </div>
+
+       <div class="form-group">
+        <label for="doctor">Doctor</label>
+        <select id="doctor">
+          <option>Dr. Calvin Carlo</option>
+          <option>Dr. Sarah Smith</option>
+          <option>Dr. Alia Reddy</option>
+          <option>Dr. Toni Kavor</option>
+          <option>Dr. Jwssica McFarlane</option>
+          <option>Dr. Elsie Sherman</option>
+          <option>Dr. Bertha Magers</option>
+        </select>
+      </div>
+<div class="form-group">
+  <label for="time">Time *</label>
+  <select id="time" required>
+    <option value="">Select Time</option>
+    <option>09:00 AM</option>
+    <option>10:00 AM</option>
+    <option>11:00 AM</option>
+    <option>12:00 PM</option>
+    <option>02:00 PM</option>
+    <option>04:00 PM</option>
+  </select>
+</div>
+       
+      <div class="form-group">
+        <label for="phone">Your Phone *</label>
+        <input type="tel" id="phone" placeholder="Your Phone" required />
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comments *</label>
+        <textarea id="comments" placeholder="Your Message" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit" id="btn-appoinment">Book An Appointment</button>
+    </form> 
+
+
+    <script src="../Js/Appoinment.js"></script>
+      <script src="../Js/Headerdata.js"></script>
+        <script src="../Js/Aside.js"></script> 
+  </body>
+</html>
+   

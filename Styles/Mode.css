@@ -1,0 +1,498 @@
+.dark-mode {
+  --bg-main: #050517;
+  --bg-card: #0c0c35;
+  --bg-soft: #090922;
+
+  --text-main: #ffffff;
+  --text-secondary: #a1a1c2;
+
+  --border-color: #3d3d3d;
+
+  --primary: #7c3aed;
+  --secondary: #ff2d55;
+  --accent: #2d5bff;
+}
+
+body.dark-mode {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.dark-mode .sidebar {
+  background: var(--bg-card);
+}
+
+.dark-mode .menu a:hover {
+  background: #14143a;
+}
+
+.dark-mode .menu span {
+  color: var(--text-secondary);
+}
+
+.dark-mode .logo-text {
+  color: var(--text-main);
+}
+
+.dark-mode .emergency-text span {
+  color: var(--text-secondary);
+}
+
+.dark-mode .header {
+  background: var(--bg-card);
+  box-shadow: none;
+}
+
+.dark-mode .header input {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.dark-mode .header input::placeholder {
+  color: var(--text-secondary);
+}
+
+.dark-mode .div-icon {
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+.dark-mode .vertical-line {
+  background: var(--border-color);
+}
+
+.dark-mode .welcome-div .how {
+  color: var(--text-main);
+}
+
+.dark-mode .card,
+.dark-mode .table,
+.dark-mode .health {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode .card h3 {
+  color: var(--text-secondary);
+}
+
+.dark-mode .label,
+.dark-mode .data-row p,
+.dark-mode .percent {
+  color: var(--text-secondary);
+}
+
+.dark-mode .number {
+  color: var(--text-main);
+}
+
+.dark-mode .progress,
+.dark-mode .progress-bar {
+  background: #1a1a3a;
+}
+
+.dark-mode .patients-table th {
+  color: var(--text-secondary);
+}
+
+.dark-mode .patients-table td {
+  border-top: 1px solid var(--border-color);
+}
+
+.dark-mode .book-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.dark-mode .go-btn {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.dark-mode .tabs button,
+.dark-mode .filters button {
+  background: #14143a;
+  color: var(--text-secondary);
+}
+
+.dark-mode .tabs .active,
+.dark-mode .filters .active {
+  background: var(--secondary);
+  color: white;
+}
+
+.dark-mode .zones::before {
+  background: var(--border-color);
+}
+
+.dark-mode .map-card img {
+  opacity: 0.5;
+}
+
+.dark-mode .card,
+.dark-mode .header,
+.dark-mode .sidebar {
+  backdrop-filter: blur(6px);
+}
+
+.dark-mode .calendar-container,
+.card {
+  background-color: var(--bg);
+}
+
+.dark-mode .plus-icon,
+.dark-mode .showappoinmentAmount {
+  background-color: var(--primary);
+  color: white;
+}
+
+
+.dark-mode .profule-text h5 {
+  color: var(--text-main);
+}
+
+.dark-mode .profule-text p {
+  color: var(--text-main);
+}
+
+.dark-mode .card h3 {
+  color: var(--text-main);
+}
+
+.dark-mode .text-health-index .healthy-index {
+  color: var(--text-main);
+}
+.dark-mode .text-health-index div .number {
+  color: var(--text-main);
+}
+.dark-mode .text-health-index div .Patience {
+  color: var(--text-main);
+}
+
+.dark-mode .person {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dark-mode .zone-map {
+  border-bottom: 2px solid var(--border-color) !important;
+}
+
+.dark-mode .calendar-container {
+  background: var(--bg-main);
+}
+
+.dark-mode .calendar-grid {
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+.dark-mode .day-name {
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.dark-mode .day {
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.dark-mode .day:hover {
+  background: #14143a;
+}
+
+.dark-mode .plus-icon {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+.dark-mode .appointment-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .appointment-form h2 {
+  color: var(--text-main);
+}
+
+.dark-mode .form-group label {
+  color: var(--text-secondary);
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select,
+.dark-mode .form-group textarea {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group select:focus,
+.dark-mode .form-group textarea:focus {
+  border-color: var(--primary);
+}
+
+.dark-mode .btn-submit {
+  background: var(--primary);
+}
+
+.dark-mode .btn-submit:hover {
+  background: #6d28d9;
+}
+
+.dark-mode .showappoinment {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+}
+
+.dark-mode .showappoinmentAmount {
+  background: var(--primary);
+  border: none;
+}
+
+.dark-mode .hover-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .info h3 {
+  color: var(--text-main);
+}
+
+.dark-mode .info span {
+  color: var(--accent);
+}
+
+.dark-mode .icon-btn {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode .icon-btn i {
+  color: var(--text-secondary);
+}
+
+.dark-mode hr {
+  border-top: 1px solid var(--border-color);
+}
+
+.dark-mode .time,
+.dark-mode .status {
+  color: var(--text-secondary);
+}
+
+.dark-mode .time i {
+  color: var(--text-secondary);
+}
+
+.dark-mode .dot {
+  background: var(--secondary);
+}
+
+.dark-mode .disease {
+  color: var(--text-main);
+}
+
+.dark-mode .calendar-container,
+.dark-mode .appointment-form,
+.dark-mode .hover-card {
+  backdrop-filter: blur(8px);
+}
+
+.dark-mode .doc-sec .box-doc {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .text-doc .dr {
+  color: var(--text-main);
+}
+
+.dark-mode .text-doc .family {
+  color: var(--secondary);
+}
+
+.dark-mode .line {
+  background-color: var(--border-color);
+}
+
+.dark-mode .text-img-doc img {
+  border: 2px solid var(--border-color);
+}
+
+.dark-mode .btns .chat {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode .btns .chat:hover {
+  background: #14143a;
+}
+
+.dark-mode .btns .book {
+  background: var(--primary);
+  color: white;
+}
+
+.dark-mode .btns .book:hover {
+  background: #6d28d9;
+}
+
+.dark-mode .btns button {
+  color: var(--text-main);
+}
+
+.dark-mode .doc-sec {
+  background: transparent;
+}
+
+.dark-mode .box-doc {
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+
+.dark-mode .box-doc:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode .result-row {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode .label {
+  color: var(--text-secondary);
+}
+
+.dark-mode .time p {
+  color: var(--secondary);
+}
+
+.dark-mode .avatar {
+  background: #1a1a3a;
+}
+
+.dark-mode .action button {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.dark-mode .action button:hover {
+  background: #14143a;
+}
+
+.dark-mode .chat-container {
+  background: var(--bg-main);
+}
+
+.dark-mode .contacts {
+  background: var(--bg-main);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dark-mode .contact {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dark-mode .contact:hover {
+  background: #14143a;
+}
+
+.dark-mode .contact-info h4 {
+  color: var(--text-main);
+}
+
+.dark-mode .contact-info span {
+  color: var(--text-secondary);
+}
+.dark-mode .chat-box {
+  background: var(--bg-main);
+}
+
+.dark-mode .chat-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dark-mode .chat-header h3 {
+  color: var(--text-main);
+}
+
+.dark-mode .messages {
+  background: var(--bg-main);
+}
+
+.dark-mode .msg.other {
+  background: #1a1a3a;
+  color: var(--text-main);
+}
+
+.dark-mode .msg.me {
+  background: var(--secondary);
+  color: white;
+}
+
+.dark-mode .chat-input {
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-main);
+}
+
+.dark-mode .chat-input input {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.dark-mode .contacts {
+  border-right: 1px solid var(--border-color);
+}
+
+.dark-mode .chat-input input::placeholder {
+  color: var(--text-secondary);
+}
+
+.dark-mode .chat-input button {
+  background: var(--secondary);
+}
+
+.dark-mode .chat-input button:hover {
+  background: #e11d48;
+}
+.dark-mode .chat-box,
+.dark-mode .contacts,
+.dark-mode .result-row {
+  backdrop-filter: blur(6px);
+}
+ 
+
+.dark-mode  .container-card .card{
+  background-color: var(--bg-main);
+}
+
+label {
+  color: var(--text-main);
+
+} 
+
+input {
+ background-color: var(--bg-main);
+ color:  var(--text-main);
+}  
+
+
+ .dark-mode .security {
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-main);
+} 

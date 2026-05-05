@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/Logoutdoctore.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Logout</title>
+  </head>
+  <body>
+    <aside class="sidebar close">
+      <!-- LOGO -->
+      <div class="logo" id="sidebarToggle">
+        <img src="../images/Group 53.png" alt="" />
+        <span class="logo-text">Iwosan</span>
+      </div>
+
+      <!-- MENU -->
+      <ul class="menu">
+        <li>
+          <a href="./Overview.html">
+            <img src="../images/Group (1).png" />
+            <span>Overview</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Appointmentsdoctore.html">
+            <img src="../images/Groupappoinment.png" />
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Patientsdoctore.html">
+            <img src="../images/Grouppatiet.png" />
+            <span>Patients</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Chatsdoctore.html">
+            <img src="../images/Group (4).png" />
+            <span>Chats</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Settingsdoctore.html">
+            <img src="../images/Group (6).png" />
+            <span>Settings</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Logoutdoctore.html" class="logout">
+            <img src="../images/Group (7).png" />
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- EMERGENCY -->
+      <div class="emergency">
+        <div class="circle">
+          <img src="../images/Group (8).png" />
+        </div>
+
+        <div class="emergency-text">
+          <p>Emergency Hotlines</p>
+          <span>+234 92 928 2891</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="header">
+      <input type="text" placeholder="Search pathology results" />
+      <div class="div-icon">
+        <i class="fa-regular fa-bell"></i>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="profile-info">
+        <img id="userImage" src="../images/Portrait of Young Woman.png" />
+        <div class="profule-text">
+          <h5 id="userName">Menna Fathalla</h5>
+          <p id="userRole">Patient</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welcome div -->
+    <div class="welcome-mode">
+      <div class="welcome-div">
+        <p class="name">Logout</p>
+      </div>
+
+      <div class="mode">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" class="theme-switch">
+          <span class="icon sun">☀</span>
+          <span class="icon moon">🌙</span>
+        </label>
+      </div>
+    </div>
+    <!-- MAIN CONTENT -->
+
+    <div class="logout-container">
+      <div class="logo">
+        <img src="../images/Group 53.png" alt="logo" />
+      </div>
+
+      <div class="form-box">
+        <label>Email</label>
+        <input type="email" value="olabouluwatofezy@ymail.com" />
+
+        <button class="logout-btn" id="log-btn">LOGOUT</button>
+      </div>
+    </div>
+
+    <script src="../Js/Logout.js"></script>
+    <script src="../Js/Headerdata.js"></script>
+    <script src="../Js/Aside.js"></script>
+  </body>
+</html>

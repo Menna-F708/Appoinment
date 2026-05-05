@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview Patient</title>
+    <link rel="stylesheet" href="../Styles/overview.css" />
+    <link rel="stylesheet" href="../Styles/Mode.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar close">
+      <!-- LOGO -->
+      <div class="logo" id="sidebarToggle">
+        <img src="../images/Group 53.png" alt="" />
+        <span class="logo-text">Iwosan</span>
+      </div>
+
+      <!-- MENU -->
+      <ul class="menu">
+        <li>
+          <a href="./overview.html">
+            <img src="../images/Group (1).png" />
+            <span>Overview</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Appoinment.html">
+            <img src="../images/Groupappoinment.png" />
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Doctore.html">
+            <img src="../images/Grouppatiet.png" />
+            <span>Doctors</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Chats.html">
+            <img src="../images/Group (4).png" />
+            <span>Chats</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Setting.html">
+            <img src="../images/Group (6).png" />
+            <span>Settings</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Logout.html" class="logout">
+            <img src="../images/Group (7).png" />
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- EMERGENCY -->
+      <div class="emergency">
+        <div class="circle">
+          <img src="../images/Group (8).png" />
+        </div>
+
+        <div class="emergency-text">
+          <p>Emergency Hotlines</p>
+          <span>+234 92 928 2891</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main-Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <input type="text" placeholder="Search pathology results" />
+        <div class="div-icon">
+          <i class="fa-regular fa-bell"></i>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="profile-info">
+          <img id="userImage" src="../images/Portrait of Young Woman.png" />
+          <div class="profule-text">
+            <h5 id="userName">Menna Fathalla</h5>
+            <p id="userRole">Patient</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Welcome div -->
+      <div class="welcome-mode">
+        <div class="welcome-div">
+          <p class="name" id="welcomeName">Welcome Menna Fathalla</p>
+          <p class="how">How’re you feeling today?</p>
+        </div>
+
+        <div class="mode">
+          <input type="checkbox" id="theme-toggle" />
+          <label for="theme-toggle" class="theme-switch">
+            <span class="icon sun">☀</span>
+            <span class="icon moon">🌙</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <section class="home-section">
+        <div class="container">
+          <!-- diagnostics -->
+          <div class="card diagnostics">
+            <h3>DIAGNOSTICS</h3>
+            <div id="chart"></div>
+            <div class="chart-data">
+              <div class="data-row">
+                <span class="dot bluee"></span>
+                <p>MALARIA</p>
+                <div class="progress bluee">
+                  <span style="width: 90%"></span>
+                </div>
+                <span class="percent">20%</span>
+              </div>
+
+              <div class="data-row">
+                <span class="dot yelloww"></span>
+                <p>COLD</p>
+                <div class="progress yelloww">
+                  <span style="width: 70%"></span>
+                </div>
+                <span class="percent">20%</span>
+              </div>
+
+              <div class="data-row">
+                <span class="dot purplee"></span>
+                <p>TYPHOID</p>
+                <div class="progress purplee">
+                  <span style="width: 40%"></span>
+                </div>
+                <span class="percent">20%</span>
+              </div>
+
+              <div class="data-row">
+                <span class="dot redd"></span>
+                <p>OTHERS</p>
+                <div class="progress redd">
+                  <span style="width: 20%"></span>
+                </div>
+                <span class="percent">20%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- patients -->
+          <div class="card patients">
+            <h3>PATIENTS</h3>
+
+            <div id="chart-two"></div>
+            <div class="chart-data">
+              <div class="data-row">
+                <span class="dot bluee"></span>
+                <p>MEN</p>
+                <div class="progress bluee">
+                  <span style="width: 60%"></span>
+                </div>
+                <span class="percent">60%</span>
+              </div>
+
+              <div class="data-row">
+                <span class="dot redd"></span>
+                <p>WOMEN</p>
+                <div class="progress redd">
+                  <span style="width: 25%"></span>
+                </div>
+                <span class="percent">25%</span>
+              </div>
+
+              <div class="data-row">
+                <span class="dot yelloww"></span>
+                <p>CHILDREN</p>
+                <div class="progress yelloww">
+                  <span style="width: 15%"></span>
+                </div>
+                <span class="percent">15%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Health Index -->
+          <div class="card health">
+            <div class="text-health-index">
+              <p class="healthy-index">Healyh Index</p>
+              <div>
+                <p class="number">75%</p>
+                <p class="Patience">Patience health rate</p>
+              </div>
+            </div>
+            <svg viewBox="0 0 240 140" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="blueGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#1f3bff" />
+                  <stop offset="100%" stop-color="#0a0f5c" />
+                </linearGradient>
+              </defs>
+
+              <!-- Blue bottom curve -->
+              <path
+                d="M0 100 
+             C40 80, 70 95, 100 75 
+             C130 55, 160 80, 190 60
+             C210 50, 220 55, 240 45
+             L240 140 L0 140 Z"
+                fill="url(#blueGradient)"
+              />
+
+              <rect x="20" y="95" width="4" height="25" fill="#4fc3ff" />
+              <rect x="50" y="85" width="4" height="35" fill="#4fc3ff" />
+              <rect x="80" y="70" width="4" height="50" fill="#4fc3ff" />
+              <rect x="110" y="60" width="4" height="60" fill="#4fc3ff" />
+              <rect x="140" y="75" width="4" height="45" fill="#4fc3ff" />
+              <rect x="170" y="65" width="4" height="55" fill="#4fc3ff" />
+              <rect x="200" y="80" width="4" height="40" fill="#4fc3ff" />
+
+              <!-- Red point -->
+              <circle cx="170" cy="65" r="6" fill="#ff2d55" />
+              <circle cx="170" cy="65" r="3" fill="#fff" />
+            </svg>
+
+            <div class="months">
+              <span>June</span>
+              <span>July</span>
+              <span>Aug</span>
+              <span>Sept</span>
+              <span>Oct</span>
+              <span>Nov</span>
+              <span>Dec</span>
+            </div>
+          </div>
+
+          <!-- overall appointments -->
+          <div class="card overall">
+            <h3>OVERALL APPOINTMENTS</h3>
+            <div id="appointments"></div>
+          </div>
+
+          <!-- upcoming -->
+          <div class="card upcoming">
+            <h3>UPCOMING APPOINTMENTS</h3>
+
+            <div class="person">
+              <div class="avatar"></div>
+              <div class="info">
+                <p>Ibrahim Yekeni</p>
+                <span class="red">Emergency</span>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="avatar"></div>
+              <div class="info">
+                <p>Ibuka Kelechi</p>
+                <span class="yellow">Examination</span>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="avatar"></div>
+              <div class="info">
+                <p>Ibrahim Yekeni</p>
+                <span class="red">Emergency</span>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="avatar"></div>
+              <div class="info">
+                <p>Ibuka Kelechi</p>
+                <span class="yellow">Examination</span>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="avatar"></div>
+              <div class="info">
+                <p>Ibrahim Yekeni</p>
+                <span class="red">Emergency</span>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="avatar"></div>
+              <div class="info">
+                <p>Ibuka Kelechi</p>
+                <span class="yellow">Examination</span>
+              </div>
+            </div>
+
+            <div class="person">
+              <div class="avatar"></div>
+              <div class="info">
+                <p>Ibrahim Yekeni</p>
+                <span class="red">Emergency</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="card map-card">
+            <h3>COVID 19 PANDEMIC</h3>
+            <div class="zone-map">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+                alt="World Map"
+              />
+
+              <div class="zones">
+                <div class="zone">
+                  <p>RECOVERY ZONES</p>
+                  <span class="recovery">12M</span>
+                </div>
+                <div class="zone">
+                  <p>NEUTRAL ZONES</p>
+                  <span class="neutral">5M</span>
+                </div>
+                <div class="zone">
+                  <p>AFFECTED ZONES</p>
+                  <span class="affected">18M</span>
+                </div>
+                <div class="zone">
+                  <p>SAFE ZONE</p>
+                  <span class="safe">2M</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="countries">
+              <div>
+                <button class="active">Select the countries</button>
+              </div>
+              <div>
+                <button>Canada</button>
+                <button>UK</button>
+                <button>Germany</button>
+                <button>Japan</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company growth (Radar) -->
+          <div class="card growth">
+            <h3>COMPANY GROWTH</h3>
+
+            <div id="chart-radar"></div>
+            <div class="radar-stats">
+              <div class="radar-item">
+                <div class="radar-top">
+                  <span class="label">MALARIA</span>
+                  <span class="number">70%</span>
+                </div>
+                <div class="progress-bar">
+                  <span style="width: 70%"></span>
+                </div>
+              </div>
+
+              <div class="radar-item">
+                <div class="radar-top">
+                  <span class="label">COLD</span>
+                  <span class="number">55%</span>
+                </div>
+                <div class="progress-bar">
+                  <span style="width: 55%"></span>
+                </div>
+              </div>
+
+              <div class="radar-item">
+                <div class="radar-top">
+                  <span class="label">TYPHOID</span>
+                  <span class="number">60%</span>
+                </div>
+                <div class="progress-bar">
+                  <span style="width: 60%"></span>
+                </div>
+              </div>
+
+              <div class="radar-item">
+                <div class="radar-top">
+                  <span class="label">COUGH</span>
+                  <span class="number">45%</span>
+                </div>
+                <div class="progress-bar">
+                  <span style="width: 45%"></span>
+                </div>
+              </div>
+
+              <div class="radar-item">
+                <div class="radar-top">
+                  <span class="label">HEADACHE</span>
+                  <span class="number">80%</span>
+                </div>
+                <div class="progress-bar">
+                  <span style="width: 80%"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="../Js/overview.js"></script>
+    <script src="../Js/Headerdata.js"></script>
+    <script src="../Js/Aside.js"></script>
+  </body>
+</html>

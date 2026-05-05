@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/PathologyResults.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Appoinment Doctore</title>
+  </head> 
+  <body>
+    <aside class="sidebar close">
+      <!-- LOGO -->
+      <div class="logo" id="sidebarToggle">
+        <img src="../images/Group 53.png" alt="" />
+        <span class="logo-text">Iwosan</span>
+      </div> 
+
+      <!-- MENU -->
+      <ul class="menu">
+        <li>
+          <a href="./overview.html">
+            <img src="../images/Group (1).png" />
+            <span>Overview</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Appoinment.html">
+            <img src="../images/Groupappoinment.png" />
+            <span>Appointments</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Doctore.html">
+            <img src="../images/Grouppatiet.png" />
+            <span>Patients</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Chats.html">
+            <img src="../images/Group (4).png" />
+            <span>Chats</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Setting.html">
+            <img src="../images/Group (6).png" />
+            <span>Settings</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="./Logout.html" class="logout">
+            <img src="../images/Group (7).png" />
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- EMERGENCY -->
+      <div class="emergency">
+        <div class="circle">
+          <img src="../images/Group (8).png" />
+        </div>
+
+        <div class="emergency-text">
+          <p>Emergency Hotlines</p>
+          <span>+234 92 928 2891</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="header">
+      <input type="text" placeholder="Search pathology results" />
+      <div class="div-icon">
+        <i class="fa-regular fa-bell"></i>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="profile-info">
+        <img src="../images/Portrait of Young Woman.png" />
+        <div class="profule-text">
+          <h5>Menna Fathalla</h5>
+          <p>Patient</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welcome div -->
+    <div class="welcome-mode">
+      <div class="welcome-div">
+        <p class="name">PathologyResult</p>
+      </div>
+
+      <div class="mode">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" class="theme-switch">
+          <span class="icon sun">☀</span>
+          <span class="icon moon">🌙</span>
+        </label>
+      </div>
+    </div>
+ 
+
+<section class="results">
+
+  <!-- TOP BAR -->
+  <div class="results-top">
+
+    <div class="filters">
+ 
+<div>
+        <select>
+          <option>Show 12</option>
+          <option>Show 24</option>
+        </select>
+  
+        <select>
+          <option>This month</option>
+          <option>Last month</option>
+        </select>
+</div>
+
+<div class="inpu-btn"> 
+        <input type="text" placeholder="Search doctors by name or title">
+  
+        <div class="view-buttons">
+          <button>Day</button>
+          <button>Week</button>
+          <button class="active">Month</button>
+        </div>
+</div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TABLE -->
+  <div class="results-table">
+
+    <!-- table header (desktop only) -->
+    <div class="table-head">
+      <span>Doctor</span>
+      <span>File</span>
+      <span>Time</span>
+      <span>Action</span>
+    </div>
+
+
+    <!-- CARD / ROW -->
+    <div class="result-row">
+
+      <div class="doctor">
+        <img src="../images/doctor.png">
+        <p>Dr. Ibrahim Yekeni</p>
+      </div>
+
+      <div class="file">
+        Malaria Infection Treatment
+      </div>
+
+      <div class="time">
+        2:00PM
+      </div>
+
+      <div class="action">
+        <button class="result-btn">View Result</button>
+      </div>
+
+    </div>
+
+
+    <div class="result-row">
+
+      <div class="doctor">
+        <img src="../images/doctor.png">
+        <p>Dr. Ebuka Kelechi</p>
+      </div>
+
+      <div class="file">
+        Transcend
+      </div>
+
+      <div class="time">
+        5:00AM
+      </div>
+
+      <div class="action">
+        <button class="result-btn">View Result</button>
+      </div>
+
+    </div>
+
+
+    <div class="result-row">
+
+      <div class="doctor">
+        <img src="../images/doctor.png">
+        <p>Dr. Kemi Olowojeg</p>
+      </div>
+
+      <div class="file">
+        Covid 19 Test
+      </div>
+
+      <div class="time">
+        4:00PM
+      </div>
+
+      <div class="action">
+        <button class="result-btn">View Result</button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- PAGINATION -->
+  <div class="pagination">
+    <button class="page active">1</button>
+    <button class="page">2</button>
+    <button class="page">3</button>
+    <button class="page">10</button>
+  </div>
+
+</section> 
+    <script src="../Js/PathologyResults.js"></script>
+  </body>
+</html>
+    

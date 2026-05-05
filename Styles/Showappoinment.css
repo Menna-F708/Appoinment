@@ -1,0 +1,284 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #ffffff;
+  padding: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 70px;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 99999;
+}
+.sidebar.open ~ .home-section {
+  margin-left: 78px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.logo img {
+  width: 28px;
+}
+
+.logo-text {
+  display: none;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #12132a;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  flex: 1;
+}
+
+.menu li {
+  margin-bottom: 8px;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background: #e4e4e4;
+}
+
+.menu img {
+  width: 20px;
+  height: 20px;
+}
+
+.menu span {
+  display: none;
+  margin-left: 12px;
+  font-size: 15px;
+  color: #343434;
+}
+
+.logout span {
+  color: #f80d38;
+}
+
+.sidebar.open {
+  width: 240px;
+}
+
+.sidebar.open .logo-text {
+  display: block;
+}
+
+.sidebar.open .menu span {
+  display: block;
+}
+
+.sidebar.open .emergency-text {
+  display: block;
+}
+
+.sidebar.open .menu a {
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.sidebar.open .logo {
+  justify-content: flex-start;
+}
+
+.sidebar.open .emergency {
+  justify-content: flex-start;
+}
+
+.emergency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #100db1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle img {
+  width: 18px;
+}
+
+.emergency-text {
+  display: none;
+  margin-left: 10px;
+}
+
+.emergency-text p {
+  color: #f80d38;
+  font-size: 14px;
+}
+
+.emergency-text span {
+  font-size: 12px;
+  color: #343434;
+}
+
+/* يخلي الجدول ميكسرش في الموبايل */
+.table-container {
+  margin-left: 90px;
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+/* الجدول نفسه */
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* الهيدر */
+.appointment-table thead {
+  background: linear-gradient(135deg, #2d5bff, #3f51ff);
+  color: #fff;
+}
+
+.appointment-table th {
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* الداتا */
+.appointment-table td {
+  padding: 14px;
+  font-size: 13px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+/* hover row */
+.appointment-table tbody tr {
+  transition: 0.2s;
+}
+
+.appointment-table tbody tr:hover {
+  background: #f5f8ff;
+}
+
+/* zebra effect */
+.appointment-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* ================= Responsive ================= */
+
+/* تابليت */
+@media (max-width: 900px) {
+  .appointment-table th,
+  .appointment-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+/* موبايل */
+@media (max-width: 600px) {
+  .appointment-table thead {
+    display: none;
+  }
+
+  .appointment-table,
+  .appointment-table tbody,
+  .appointment-table tr,
+  .appointment-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .appointment-table tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  }
+
+  .appointment-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border: none;
+    font-size: 12px;
+  }
+
+  .appointment-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+  }
+}
+@media (min-width: 1200px) {
+  .sidebar {
+    width: 70px;
+  }
+  .nav-links img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  .logo-text,
+  .menu span,
+  .emergency-text {
+    display: none;
+  }
+
+  .menu a {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .emergency {
+    justify-content: center;
+  }
+
+  .home-section {
+    margin-left: 70px;
+  }
+} 

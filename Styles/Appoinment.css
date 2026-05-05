@@ -1,0 +1,861 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #ffffff;
+  padding: 20px;
+
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0; 
+  height: 100%;
+  width: 70px;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 99999;
+}
+.sidebar.open ~ .home-section {
+  margin-left: 78px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.logo img {
+  width: 28px;
+}
+
+.logo-text {
+  display: none;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #12132a;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  flex: 1;
+}
+
+.menu li {
+  margin-bottom: 8px;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background: #e4e4e4;
+}
+
+.menu img {
+  width: 20px;
+  height: 20px;
+}
+
+.menu span {
+  display: none;
+  margin-left: 12px;
+  font-size: 15px;
+  color: #343434;
+}
+
+.logout span {
+  color: #f80d38;
+}
+
+.sidebar.open {
+  width: 240px;
+}
+
+.sidebar.open .logo-text {
+  display: block;
+}
+
+.sidebar.open .menu span {
+  display: block;
+}
+
+.sidebar.open .emergency-text {
+  display: block;
+}
+
+.sidebar.open .menu a {
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.sidebar.open .logo {
+  justify-content: flex-start;
+}
+
+.sidebar.open .emergency {
+  justify-content: flex-start;
+}
+
+.emergency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #100db1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle img {
+  width: 18px;
+}
+
+.emergency-text {
+  display: none;
+  margin-left: 10px;
+}
+
+.emergency-text p {
+  color: #f80d38;
+  font-size: 14px;
+}
+
+.emergency-text span {
+  font-size: 12px;
+  color: #343434;
+}
+
+/* ======================= HEADER =========================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f7f7;
+  padding: 15px 6px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: static;
+  top: 20px;
+  z-index: 100;
+  margin-left: 68px;
+}
+
+.header input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  outline: none;
+  width: 300px;
+  transition: all 0.3s;
+  flex: 1;
+  margin-right: 6px;
+}
+
+.header input[type="text"]:focus {
+  border-color: #2d5bff;
+  box-shadow: 0 0 5px rgba(45, 91, 255, 0.3);
+}
+
+.div-icon {
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+  border: 1px solid #c5c5c5;
+  border-radius: 50%;
+  padding: 0.1rem;
+  margin-right: 0.7rem;
+}
+
+.div-icon:hover {
+  color: #2d5bff;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 20px;
+  background: #c5c5c5;
+  position: relative;
+  right: 0.3rem;
+}
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s;
+  border: 3px solid white;
+}
+
+.profile-info img:hover {
+  transform: scale(1.1);
+}
+
+.profule-text h5 {
+  margin: 0;
+  font-size: 10px;
+  white-space: nowrap;
+  color: #333;
+}
+
+.profule-text p {
+  margin: 0;
+  font-size: 10px;
+  color: #100db1;
+  padding-top: 0.1rem;
+}
+
+/* =================== WELCOME SECTION ===================== */
+.welcome-mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 15px 3px;
+  border-radius: 16px;
+  margin-left: 78px;
+}
+
+.welcome-div .name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f80d38;
+}
+
+.mode {
+  display: flex;
+  align-items: center;
+}
+
+.mode input {
+  display: none;
+}
+.welcome-div p {
+  font-size: 0.8rem;
+}
+
+.theme-switch {
+  width: 48px;
+  height: 24px;
+  background: #e5e7eb;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  font-size: 11px;
+}
+
+.theme-switch::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 3px;
+  left: 3px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.icon {
+  opacity: 0.5;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+#theme-toggle:checked + .theme-switch {
+  background: #1f2937;
+}
+
+#theme-toggle:checked + .theme-switch::before {
+  transform: translateX(24px);
+}
+
+#theme-toggle:checked + .theme-switch .moon {
+  opacity: 1;
+}
+
+#theme-toggle:checked + .theme-switch .sun {
+  opacity: 0.4;
+}
+
+/* ====================== Calender ==================== */
+.calendar-container {
+  margin-left: 60px;
+  width: calc(100% - 70px);
+  padding: 12px;
+  background: #fff;
+  border-radius: 12px; 
+  overflow-x: hidden;
+}
+
+.calendar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px; 
+}
+ 
+.calendar-top h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.calendar-top button {
+  border: none;
+  background: #f1f1f1;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid; 
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  border-radius: 6px;
+   min-width: 350px;
+}
+
+.day-name {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 8px 0;
+  border-right: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+/* ===================== Day Calender ================ */
+.day {
+  position: relative;
+  z-index: 1;
+  min-height: 55px; 
+  padding: 4px;
+  font-size: 11px;
+  border-right: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+ 
+/* ==================== Plus Icon in Calender ===================== */
+.plus-icon {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  background: rgb(250, 248, 248);
+  color: rgb(15, 15, 15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  font-size: 18px;
+  display: none;
+}
+
+.day:hover .plus-icon {
+  display: flex;
+}
+.day:hover {
+  background: #f7f7f7;
+  z-index: 1000;
+}
+
+ 
+/* ===================== Appoinment-Form ====================== */
+.appointment-form { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  max-width: 300px;
+  z-index: 10000;
+}
+.appointment-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-size: 0.8rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #100db1;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #100db1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #357abd;
+}
+
+/* =============== Appoinment-div ============== */
+.showappoinment {
+  position: relative;
+  cursor: pointer; 
+  display: flex;
+  align-items: center;
+  gap: 1rem;  
+  color: #f5f3f3;
+  padding: 6px 12px;
+  margin-top: 0;
+  border-radius: 20px;
+  font-size: 7px;
+  font-weight: 600;
+  width: 100%; 
+  min-height: 22px;
+  transition: 0.2s ease;
+}
+
+.showappoinment:hover {
+  transform: scale(1.03);
+}
+
+.showappoinment span {
+  font-size: 8px;
+  font-weight: 600;
+}
+
+/* ================ Number of Appoinment ================= */
+.showappoinmentAmount {
+  background-color: #1e063e;
+  font-size: 9px;
+  font-weight: 600;
+  color: white;
+  border: 1px solid #1e063e;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+/* ================= Appoinment-Card(Appoinment-Details) Hover ============== */
+.appointment-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px; 
+  max-width: 200px;
+  margin: auto;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+.hover-card {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 250px;
+  background: #ffffff;
+  border-radius: 7px;
+  padding: 15px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.25s ease;
+  z-index: 9999999; 
+}
+
+.showappoinment:hover .hover-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hover-card:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  background: #d9d9d9;
+  border-radius: 50%;
+}
+
+.info h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #343434;
+}
+
+.info span {
+  color: #3f51ff;
+  font-size: 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background: #fafafa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn i {
+  color: #555;
+  font-size: 10px;
+}
+
+hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #333;
+}
+ 
+.time i {
+  color: #666;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #343434;
+  font-weight: 600;
+  font-size: 0.6rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: red;
+    color: #343434; 
+  border-radius: 50%;
+}
+
+.disease {
+  font-weight: 600;
+  color: #444;
+}
+ 
+
+
+
+/* ====================== Tablet ====================== */
+@media (min-width: 768px) {
+  .appointment-card {
+    max-width: 200px;
+  }
+
+  .bottom {
+    flex-wrap: nowrap;
+  }
+}
+
+/*  ====================== Desktob ===================== */
+@media (min-width: 1200px) {
+  /*  ====================== Sidbar ===================== */
+  .sidebar {
+    width: 70px;
+  }
+  .nav-links img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  .logo-text,
+  .menu span,
+  .emergency-text {
+    display: none;
+  }
+
+  .menu a {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .emergency {
+    justify-content: center;
+  }
+
+  .home-section {
+    margin-left: 70px;
+  }
+
+  .header,
+  .welcome-mode {
+    margin-left: 70px;
+  }
+
+  .profile_name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #f80d38;
+  }
+
+  .job {
+    font-size: 12px;
+    color: #343434;
+  }
+
+  /*  ====================== Header ===================== */
+   .header {
+  padding: 20px 16px;
+}
+
+  .header input[type="text"] {
+    padding: 13px 12px;
+  }
+
+  .div-icon {
+    padding: 0.2rem;
+    margin-right: 0.8rem;
+  }
+
+  .vertical-line {
+    height: 23px;
+  }
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .profile-info img {
+    width: 40px;
+    height: 40px;
+    margin-left: 0.3rem;
+  }
+
+  .profule-text h5 {
+    font-size: 13px;
+  }
+
+  .profule-text p {
+    font-size: 13px;
+  }
+
+  .welcome-div .name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f80d38;
+  }
+
+  /* ==================== Calender ================== */
+  .calendar-container {
+    width: calc(100% - 70px);
+    padding: 20px;
+  }
+
+  .calendar-top h3 {
+    font-size: 23px;
+  }
+  .day {
+    min-height: 90px;
+    font-size: 15px;
+  }
+
+  .day:hover {
+    z-index: 1000;
+  }
+ 
+  .day-name {
+    font-size: 17px;
+    padding: 1rem 0;
+  }
+
+  /*  ===================== Appoinment-Form =================== */
+  .appointment-form {
+    width: 90%;
+    max-width: 600px;
+    top: 53%;
+  }
+
+  .appointment-form h2 {
+    font-size: 1.2rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .btn-submit {
+    font-size: 16px;
+  }
+
+  /* ================= Show Appoinment in Calender ================== */
+  .showappoinment {
+    padding: 15px 12px;
+    min-height: 32px;
+    margin-top: 40;
+    gap: 4rem;
+  }
+
+  .showappoinment span {
+    font-size: 12px;
+  }
+
+  /* ================= Appoinment-Card(Appoinment-Details) Hover ============== */
+  .hover-card {
+    width: 340px;
+    border-radius: 9px;
+  }
+
+  .avatar {
+    width: 55px;
+    height: 55px;
+  }
+
+  .info h3 {
+    font-size: 1rem;
+  }
+
+  .info span {
+    font-size: 0.9rem;
+    padding-top: 0.2rem;
+  }
+
+  .icon-btn {
+    width: 33px;
+    height: 33px;
+  }
+
+  .icon-btn i {
+    font-size: 0.8rem;
+  }
+
+  .time {
+    font-size: 0.66rem;
+  }
+
+  .status {
+    font-size: 0.66rem;
+  }
+
+
+}
