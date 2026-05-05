@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const sidebar = document.querySelector(".sidebar");
+  const hamburger = document.getElementById("hamburger");
+
+  hamburger.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+  }); 
   // ===== ApexCharts Donuts =====
   var chart1 = new ApexCharts(document.querySelector("#chart"), {
     series: [16, 55, 30, 25],
