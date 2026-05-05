@@ -409,7 +409,45 @@ body {
   margin-left: 78px;
   transition: margin-left 0.3s;
 }
+.hamburger {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
 
+  .header {
+    margin-left: 0;
+  }
+
+  .home-section {
+    margin-left: 0;
+  }
+
+  .welcome-mode {
+    margin-left: 0;
+  }
+
+  /* sidebar hidden by default on mobile */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: 0.3s;
+    width: 240px;
+  }
+
+  /* open sidebar */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .doc-sec {
+  margin-left: 7px;
+ }
+} 
 @media (min-width: 1200px) {
   .sidebar {
     width: 70px;
@@ -489,7 +527,7 @@ body {
     left: 0.1rem;
   }
   .profile-info {
-    display: flex;
+    display: flex ;
     align-items: center;
     gap: 8px;
   }

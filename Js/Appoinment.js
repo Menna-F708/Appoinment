@@ -78,7 +78,7 @@ function renderCalendar() {
 
   loadAppointments();
 }
-
+ 
 // ================= Month =================
 prevBtn.onclick = () => {
   date.setMonth(date.getMonth() - 1);

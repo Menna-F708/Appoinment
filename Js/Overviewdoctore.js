@@ -1,7 +1,15 @@
+
 document.querySelectorAll(".menu a").forEach((link) => {
   link.addEventListener("click", () => {
     sidebar.classList.remove("open");
   });
+}); 
+
+const sidebar = document.querySelector(".sidebar");
+const hamburger = document.getElementById("hamburger");
+
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
 }); 
 // diagnostics chart
 const ctx = document.getElementById("diagnosticschart").getContext("2d");

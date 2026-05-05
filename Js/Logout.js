@@ -9,4 +9,4 @@ const hamburger = document.getElementById("hamburger");
 
 hamburger.addEventListener("click", () => {
   sidebar.classList.toggle("open");
-}); 
+});  

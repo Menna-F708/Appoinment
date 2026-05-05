@@ -1,4 +1,9 @@
+const sidebar = document.querySelector(".sidebar");
+const hamburger = document.getElementById("hamburger");
 
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+}); 
 // ================= Calendar =================
 const calendarGrid = document.querySelector(".calendar-grid");
 const monthYear = document.getElementById("monthYear");
@@ -12,14 +17,22 @@ let selectedDay = null;
 // ================= Colors =================
 function getDepartmentColor(dept) {
   switch (dept) {
-    case "Eye Care": return "#3b82f6";
-    case "Dental": return "#10b981";
-    case "Cardiology": return "#ef4444";
-    case "Gynecologist": return "#f59e0b";
-    case "Psychotherapist": return "#8b5cf6";
-    case "Urologist": return "#14b8a6";
-    case "Neurologist": return "#ec4899";
-    default: return "#4f46e5";
+    case "Eye Care":
+      return "#3b82f6";
+    case "Dental":
+      return "#10b981";
+    case "Cardiology":
+      return "#ef4444";
+    case "Gynecologist":
+      return "#f59e0b";
+    case "Psychotherapist":
+      return "#8b5cf6";
+    case "Urologist":
+      return "#14b8a6";
+    case "Neurologist":
+      return "#ec4899";
+    default:
+      return "#4f46e5";
   }
 }
 
@@ -27,19 +40,13 @@ function getDepartmentColor(dept) {
 function renderCalendar() {
   const year = date.getFullYear();
   const month = date.getMonth();
-  const firstDay = new Date(year, month, 1).getDay();
+
   const lastDate = new Date(year, month + 1, 0).getDate();
 
   monthYear.innerText =
     date.toLocaleString("default", { month: "long" }) + " " + year;
 
   calendarGrid.innerHTML = "";
-
-  for (let i = 0; i < firstDay - 1; i++) {
-    const empty = document.createElement("div");
-    empty.classList.add("day");
-    calendarGrid.appendChild(empty);
-  }
 
   for (let d = 1; d <= lastDate; d++) {
     const day = document.createElement("div");
@@ -131,7 +138,6 @@ BtnAppoinment.addEventListener("click", (e) => {
     });
 
     appointmentForm.removeAttribute("data-edit-id");
-
   } else {
     // ➕ ADD
     const appointmentData = {
@@ -163,7 +169,7 @@ function addAppointmentToDay(dayElement, app) {
   const showAppoinment = document.createElement("div");
   showAppoinment.classList.add("showappoinment");
 
-showAppoinment.innerHTML = `
+  showAppoinment.innerHTML = `
   <span>${app.department}</span>
   <span>${app.time}</span>
 
@@ -205,7 +211,7 @@ showAppoinment.innerHTML = `
       </div>
     </div>
   </div>
-`; 
+`;
 
   showAppoinment.style.background = getDepartmentColor(app.department);
 
