@@ -358,7 +358,7 @@ body {
 /* diagnostics and  patients Chart*/
 #diagnosticschart,
 #patients {
-  width: 230px;
+  width: 170px;
   height: 230px;
   margin: 0 auto;
 }
@@ -712,6 +712,7 @@ body {
 .progress.purplee span {
   background: #763cef;
 }
+
 
 
 @media (min-width: 1200px) {
