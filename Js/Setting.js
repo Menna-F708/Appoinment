@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+const sidebar = document.querySelector(".sidebar");
+const hamburger = document.getElementById("hamburger");
 
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+}); 
 
   let allData = JSON.parse(localStorage.getItem("allData")) || [];
   const carddetails = document.getElementById("card-details");

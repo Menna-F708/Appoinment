@@ -215,7 +215,7 @@ body {
 .profile-info img {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: 50%; 
   object-fit: cover;
   transition: transform 0.3s;
   border: 3px solid white;
@@ -859,4 +859,94 @@ hr {
   }
 
 
+}
+
+.hamburger {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #333;
+} 
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .header {
+    margin-left: 0;
+  }
+
+  .home-section {
+    margin-left: 0;
+  }
+
+  .welcome-mode {
+    margin-left: 0;
+  }
+
+  /* sidebar hidden by default on mobile */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: 0.3s;
+    width: 240px;
+  }
+
+  /* open sidebar */
+  .sidebar.open {
+    transform: translateX(0);
+  } 
+  .calendar-container {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+    overflow-x: auto;
+  }
+
+  .calendar-grid {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    border-left: none;
+    border-top: none;
+  }
+
+  .day {
+    width: 100%;
+    min-height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .day-name {
+    display: none;
+  }
+
+  .plus-icon {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  .calendar-top h3 {
+    font-size: 16px;
+  }
+
+  
+
+
+
+  .appointment-form {
+    width: 90%;
+    max-width: none;
+  }
+
+ 
 }

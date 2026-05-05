@@ -1,3 +1,4 @@
+
 const doctors = [
   {
     name: "Dr. Ahmed Ali",
@@ -95,3 +96,11 @@ doctors.forEach((doctor) => {
 
   doctorsDiv.appendChild(doctorCard);
 });
+
+
+const sidebar = document.querySelector(".sidebar");
+const hamburger = document.getElementById("hamburger");
+
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+}); 

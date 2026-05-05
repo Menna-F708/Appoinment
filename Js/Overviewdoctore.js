@@ -1,4 +1,8 @@
-
+document.querySelectorAll(".menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+  });
+}); 
 // diagnostics chart
 const ctx = document.getElementById("diagnosticschart").getContext("2d");
 Chart.register({

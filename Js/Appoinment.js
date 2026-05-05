@@ -1,4 +1,9 @@
+const sidebar = document.querySelector(".sidebar");
+const hamburger = document.getElementById("hamburger");
 
+hamburger.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+});
 
 // ================= Calendar =================
 const calendarGrid = document.querySelector(".calendar-grid");
@@ -13,14 +18,22 @@ let selectedDay = null;
 // ================= Colors =================
 function getDepartmentColor(dept) {
   switch (dept) {
-    case "Eye Care": return "#3b82f6";
-    case "Dental": return "#10b981";
-    case "Cardiology": return "#ef4444";
-    case "Gynecologist": return "#f59e0b";
-    case "Psychotherapist": return "#8b5cf6";
-    case "Urologist": return "#14b8a6";
-    case "Neurologist": return "#ec4899";
-    default: return "#4f46e5";
+    case "Eye Care":
+      return "#3b82f6";
+    case "Dental":
+      return "#10b981";
+    case "Cardiology":
+      return "#ef4444";
+    case "Gynecologist":
+      return "#f59e0b";
+    case "Psychotherapist":
+      return "#8b5cf6";
+    case "Urologist":
+      return "#14b8a6";
+    case "Neurologist":
+      return "#ec4899";
+    default:
+      return "#4f46e5";
   }
 }
 
@@ -28,19 +41,13 @@ function getDepartmentColor(dept) {
 function renderCalendar() {
   const year = date.getFullYear();
   const month = date.getMonth();
-  const firstDay = new Date(year, month, 1).getDay();
+
   const lastDate = new Date(year, month + 1, 0).getDate();
 
   monthYear.innerText =
     date.toLocaleString("default", { month: "long" }) + " " + year;
 
   calendarGrid.innerHTML = "";
-
-  for (let i = 0; i < firstDay - 1; i++) {
-    const empty = document.createElement("div");
-    empty.classList.add("day");
-    calendarGrid.appendChild(empty);
-  }
 
   for (let d = 1; d <= lastDate; d++) {
     const day = document.createElement("div");
@@ -115,7 +122,6 @@ BtnAppoinment.addEventListener("click", (e) => {
   const editId = appointmentForm.getAttribute("data-edit-id");
 
   if (editId) {
-    // ✏️ EDIT
     allAppointments = allAppointments.map((item) => {
       if (item.id == editId) {
         return {
@@ -132,9 +138,7 @@ BtnAppoinment.addEventListener("click", (e) => {
     });
 
     appointmentForm.removeAttribute("data-edit-id");
-
   } else {
-    // ➕ ADD
     const appointmentData = {
       id: Date.now(),
       patientName,
@@ -163,54 +167,54 @@ BtnAppoinment.addEventListener("click", (e) => {
 function addAppointmentToDay(dayElement, app) {
   const showAppoinment = document.createElement("div");
   showAppoinment.classList.add("showappoinment");
- 
- showAppoinment.innerHTML = `
-  <span>${app.department}</span>
-  <span>${app.time}</span>
 
-  <div class="hover-card">
-    <div class="top">
-      <div class="left">
-        <div class="avatar"></div>
-        <div class="info">
-          <h3>${app.department}</h3> 
-          <span>Patient</span>
+  showAppoinment.innerHTML = `
+    <span>${app.department}</span>
+    <span>${app.time}</span>
+
+    <div class="hover-card">
+      <div class="top">
+        <div class="left">
+          <div class="avatar"></div>
+          <div class="info">
+            <h3>${app.department}</h3>
+            <span>Patient</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="icon-btn edit-btn">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="icon-btn delete-btn">
+            <i class="fa-solid fa-trash"></i>
+          </button>
         </div>
       </div>
 
-      <div class="actions">
-        <button class="icon-btn edit-btn">
-          <i class="fa-solid fa-pen"></i>
-        </button>
-        <button class="icon-btn delete-btn">
-          <i class="fa-solid fa-trash"></i>
-        </button>
-      </div>
-    </div> 
+      <hr />
 
-    <hr />
+      <div class="bottom">
+        <div class="time">
+          <i class="fa-regular fa-clock"></i>
+          ${app.time}
+        </div>
 
-    <div class="bottom">
-      <div class="time">
-        <i class="fa-regular fa-clock"></i>
-        ${app.time}
-      </div>
+        <div class="status">
+          <div class="dot"></div>
+          ${app.department}
+        </div>
 
-      <div class="status">
-        <div class="dot"></div>
-        ${app.department}
-      </div>
-
-      <div class="disease">
-        ${app.patientName || "-"}
+        <div class="disease">
+          ${app.patientName || "-"}
+        </div>
       </div>
     </div>
-  </div>
-`; 
+  `;
 
   showAppoinment.style.background = getDepartmentColor(app.department);
 
-  // ===== DELETE =====
+  // DELETE
   showAppoinment.querySelector(".delete-btn").addEventListener("click", (e) => {
     e.stopPropagation();
 
@@ -221,7 +225,7 @@ function addAppointmentToDay(dayElement, app) {
     renderCalendar();
   });
 
-  // ===== EDIT =====
+  // EDIT
   showAppoinment.querySelector(".edit-btn").addEventListener("click", (e) => {
     e.stopPropagation();
 
@@ -287,4 +291,4 @@ function loadAppointments() {
   });
 }
 
-renderCalendar();  
+renderCalendar();
