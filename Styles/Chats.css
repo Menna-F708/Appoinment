@@ -195,6 +195,7 @@ body {
 }
 
 .vertical-line {
+  display: none;
   width: 1px;
   height: 20px;
   background: #c5c5c5;
@@ -203,7 +204,7 @@ body {
 }
 
 .profile-info {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 10px;
   margin-left: 0.2rem;

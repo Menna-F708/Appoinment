@@ -198,12 +198,13 @@ body {
 }
 
 .vertical-line {
+  display: none;
   width: 1px;
   height: 20px;
   background: #c5c5c5;
 }
 .profile-info {
-  display: flex;
+  display:  none;
   align-items: center;
   gap: 10px;
   position: relative;

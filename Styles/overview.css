@@ -198,11 +198,13 @@ body {
 }
 
 .vertical-line {
+  display: none;
   width: 1px;
   height: 20px;
   background: #c5c5c5;
   position: relative;
   left: 0.1rem;
+  display: none; 
 }
 .profile-info {
   display: none;
