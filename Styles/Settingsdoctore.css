@@ -412,11 +412,22 @@ input {
   margin-right: 10px;
   color: #a39a9a;
 }
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;   
+  background: #6c6c6c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .profile-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  display: block;
 }
 @media (max-width: 768px) {
   .hamburger {
