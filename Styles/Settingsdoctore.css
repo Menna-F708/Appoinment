@@ -215,7 +215,6 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  object-fit: cover;
   transition: transform 0.3s;
   border: 3px solid white;
 }
@@ -408,9 +407,46 @@ input {
   font-weight: bold;
 } 
 
+.hamburger {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #333;
+}
 
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
 
+  .header {
+    margin-left: 0;
+  }
 
+  .home-section {
+    margin-left: 0;
+  }
+
+  .welcome-mode {
+    margin-left: 0;
+  }
+
+  /* sidebar hidden by default on mobile */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: 0.3s;
+    width: 240px;
+  }
+
+  /* open sidebar */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+   .container-card {
+  margin: 0 3rem;
+} 
+}
 @media (min-width: 1200px) {
    .sidebar {
     width: 70px;
@@ -418,7 +454,6 @@ input {
   .nav-links img {
     width: 20px;
     height: 20px;
-    object-fit: contain;
   }
   .logo-text,
   .menu span,
