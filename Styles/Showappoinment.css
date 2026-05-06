@@ -10,7 +10,6 @@ body {
   padding: 20px;
 }
 
-/* SIDEBAR */
 .sidebar {
   position: fixed;
   left: 0;
@@ -168,7 +167,6 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
-/* الهيدر */
 .appointment-table thead {
   background: linear-gradient(135deg, #2d5bff, #3f51ff);
   color: #fff;
@@ -180,7 +178,6 @@ body {
   font-size: 14px;
 }
 
-/* الداتا */
 .appointment-table td {
   padding: 14px;
   font-size: 13px;
@@ -188,7 +185,6 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-/* hover row */
 .appointment-table tbody tr {
   transition: 0.2s;
 }
@@ -197,14 +193,11 @@ body {
   background: #f5f8ff;
 }
 
-/* zebra effect */
 .appointment-table tbody tr:nth-child(even) {
   background: #fafafa;
 }
 
 /* ================= Responsive ================= */
-
-/* تابليت */
 @media (max-width: 900px) {
   .appointment-table th,
   .appointment-table td {
@@ -213,7 +206,6 @@ body {
   }
 }
 
-/* موبايل */
 @media (max-width: 600px) {
   .appointment-table thead {
     display: none;

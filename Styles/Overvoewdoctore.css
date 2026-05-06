@@ -189,7 +189,7 @@ body {
   color: #555;
   border: 1px solid #c5c5c5;
   border-radius: 50%;
-  padding: 0.1rem;
+  padding: 0.3rem;
   margin-right: 0.4rem;
 }
 
@@ -198,7 +198,6 @@ body {
 }
 
 .vertical-line {
-  display: none;
   width: 1px;
   height: 20px;
   background: #c5c5c5;
@@ -369,7 +368,6 @@ body {
   color: #888;
 }
 
-/* diagnostics and  patients Chart*/
 #diagnosticschart,
 #patients {
   width: 230px;
@@ -377,7 +375,6 @@ body {
   margin: 0 auto;
 }
 
-/* Health Index Chart */
 .health {
   position: relative;
   background: #fff;
@@ -637,7 +634,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* container */
 .chart-data {
   margin-top: 15px;
   display: flex;
@@ -645,7 +641,6 @@ body {
   gap: 12px;
 }
 
-/* row */
 .data-row {
   display: flex;
   align-items: center;
@@ -653,14 +648,12 @@ body {
   font-size: 12px;
 }
 
-/* title */
 .data-row p {
   width: 80px;
   font-weight: 600;
   color: #555;
 }
 
-/* percent */
 .percent {
   width: 40px;
   text-align: right;
@@ -668,7 +661,6 @@ body {
   color: #777;
 }
 
-/* progress bar (الخلفية الرمادي) */
 .progress {
   flex: 1;
   height: 6px;
@@ -678,7 +670,6 @@ body {
   position: relative;
 }
 
-/* الجزء اللي بيتملي */
 .fill {
   display: block;
   height: 100%;
@@ -715,42 +706,12 @@ body {
   background: #feca57;
 }
 
-
 .hamburger {
   display: none;
   font-size: 20px;
   cursor: pointer;
   margin-right: 10px;
-  color: #333;
-}
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .header {
-    margin-left: 0;
-  }
-
-  .home-section {
-    margin-left: 0;
-  }
-
-  .welcome-mode {
-    margin-left: 0;
-  }
-
-  /* sidebar hidden by default on mobile */
-  .sidebar {
-    transform: translateX(-100%);
-    transition: 0.3s;
-    width: 240px;
-  }
-
-  /* open sidebar */
-  .sidebar.open {
-    transform: translateX(0);
-  }
+  color: #a39a9a;
 }
 
 @media (max-width: 768px) {
@@ -770,18 +731,20 @@ body {
     margin-left: 0;
   }
 
-  /* sidebar hidden by default on mobile */
   .sidebar {
     transform: translateX(-100%);
     transition: 0.3s;
     width: 240px;
   }
 
-  /* open sidebar */
   .sidebar.open {
     transform: translateX(0);
   }
-} 
+
+  .vertical-line {
+    display: none;
+  }
+}
 @media (min-width: 1200px) {
   .sidebar {
     width: 70px;

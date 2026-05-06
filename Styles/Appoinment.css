@@ -8,14 +8,13 @@
 body {
   background: #ffffff;
   padding: 20px;
-
 }
 
 /* SIDEBAR */
 .sidebar {
   position: fixed;
   left: 0;
-  top: 0; 
+  top: 0;
   height: 100%;
   width: 70px;
   background: #f7f7f7;
@@ -190,7 +189,7 @@ body {
   color: #555;
   border: 1px solid #c5c5c5;
   border-radius: 50%;
-  padding: 0.1rem;
+  padding: 0.3rem;
   margin-right: 0.7rem;
 }
 
@@ -204,7 +203,6 @@ body {
   background: #c5c5c5;
   position: relative;
   right: 0.3rem;
-  display: none;
 }
 .profile-info {
   display: none;
@@ -215,7 +213,7 @@ body {
 .profile-info img {
   width: 30px;
   height: 30px;
-  border-radius: 50%; 
+  border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s;
   border: 3px solid white;
@@ -323,7 +321,7 @@ body {
   width: calc(100% - 70px);
   padding: 12px;
   background: #fff;
-  border-radius: 12px; 
+  border-radius: 12px;
   overflow-x: hidden;
 }
 
@@ -331,9 +329,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px; 
+  margin-bottom: 16px;
 }
- 
+
 .calendar-top h3 {
   font-size: 14px;
   font-weight: 600;
@@ -348,12 +346,12 @@ body {
 }
 
 .calendar-grid {
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(7, 1fr);
   border-top: 1px solid #e7e7e7;
   border-left: 1px solid #e7e7e7;
   border-radius: 6px;
-   min-width: 350px;
+  min-width: 350px;
 }
 
 .day-name {
@@ -369,7 +367,7 @@ body {
 .day {
   position: relative;
   z-index: 1;
-  min-height: 55px; 
+  min-height: 55px;
   padding: 4px;
   font-size: 11px;
   border-right: 1px solid #e7e7e7;
@@ -381,7 +379,7 @@ body {
   gap: 0.2rem;
   cursor: pointer;
 }
- 
+
 /* ==================== Plus Icon in Calender ===================== */
 .plus-icon {
   position: absolute;
@@ -408,9 +406,8 @@ body {
   z-index: 1000;
 }
 
- 
 /* ===================== Appoinment-Form ====================== */
-.appointment-form { 
+.appointment-form {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -486,17 +483,17 @@ body {
 /* =============== Appoinment-div ============== */
 .showappoinment {
   position: relative;
-  cursor: pointer; 
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 1rem;  
+  gap: 1rem;
   color: #f5f3f3;
   padding: 6px 12px;
   margin-top: 0;
   border-radius: 20px;
   font-size: 7px;
   font-weight: 600;
-  width: 100%; 
+  width: 100%;
   min-height: 22px;
   transition: 0.2s ease;
 }
@@ -525,7 +522,7 @@ body {
 .appointment-card {
   background: #fff;
   border-radius: 20px;
-  padding: 10px; 
+  padding: 10px;
   max-width: 200px;
   margin: auto;
   border: 1px solid #e7e7e7;
@@ -546,7 +543,7 @@ body {
   visibility: hidden;
   transform: translateY(10px);
   transition: 0.25s ease;
-  z-index: 9999999; 
+  z-index: 9999999;
 }
 
 .showappoinment:hover .hover-card {
@@ -633,7 +630,7 @@ hr {
   font-weight: 600;
   color: #333;
 }
- 
+
 .time i {
   color: #666;
 }
@@ -651,7 +648,7 @@ hr {
   width: 10px;
   height: 10px;
   background: red;
-    color: #343434; 
+  color: #343434;
   border-radius: 50%;
 }
 
@@ -659,9 +656,13 @@ hr {
   font-weight: 600;
   color: #444;
 }
- 
-
-
+.hamburger {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #a39a9a;
+}
 
 /* ====================== Tablet ====================== */
 @media (min-width: 768px) {
@@ -673,10 +674,97 @@ hr {
     flex-wrap: nowrap;
   }
 }
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .header {
+    margin-left: 0;
+  }
+
+  .home-section {
+    margin-left: 0;
+  }
+
+  .welcome-mode {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: 0.3s;
+    width: 240px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .vertical-line {
+    display: none;
+  }
+  .calendar-container {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+    overflow-x: auto;
+  }
+
+  .calendar-grid {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    border-left: none;
+    border-top: none;
+  }
+
+  .day {
+    width: 100%;
+    min-height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .day-name {
+    display: none;
+  }
+
+  .plus-icon {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  .calendar-top h3 {
+    font-size: 16px;
+  }
+
+  .appointment-form {
+    width: 90%;
+    max-width: none;
+  }
+
+  .showappoinment {
+    justify-content: space-between;
+    gap: 0.8rem;
+    padding: 15px 14px;
+    width: 80%;
+  }
+
+  .showappoinment span {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
 
 /*  ====================== Desktob ===================== */
 @media (min-width: 1200px) {
-  /*  ====================== Sidbar ===================== */
   .sidebar {
     width: 70px;
   }
@@ -724,10 +812,9 @@ hr {
     color: #343434;
   }
 
-  /*  ====================== Header ===================== */
-   .header {
-  padding: 20px 16px;
-}
+  .header {
+    padding: 20px 16px;
+  }
 
   .header input[type="text"] {
     padding: 13px 12px;
@@ -784,7 +871,7 @@ hr {
   .day:hover {
     z-index: 1000;
   }
- 
+
   .day-name {
     font-size: 17px;
     padding: 1rem 0;
@@ -857,96 +944,4 @@ hr {
   .status {
     font-size: 0.66rem;
   }
-
-
-}
-
-.hamburger {
-  display: none;
-  font-size: 20px;
-  cursor: pointer;
-  margin-right: 10px;
-  color: #333;
-} 
-
-/* ================= MOBILE FIX ================= */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .header {
-    margin-left: 0;
-  }
-
-  .home-section {
-    margin-left: 0;
-  }
-
-  .welcome-mode {
-    margin-left: 0;
-  }
-
-  /* sidebar hidden by default on mobile */
-  .sidebar {
-    transform: translateX(-100%);
-    transition: 0.3s;
-    width: 240px;
-  }
-
-  /* open sidebar */
-  .sidebar.open {
-    transform: translateX(0);
-  } 
-  .calendar-container {
-    margin-left: 0;
-    width: 100%;
-    padding: 10px;
-    overflow-x: auto;
-  }
-
-  .calendar-grid {
-    display: flex;
-    flex-direction: column;
-    min-width: 100%;
-    border-left: none;
-    border-top: none;
-  }
-
-  .day {
-    width: 100%;
-    min-height: 80px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #e7e7e7;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-
-  .day-name {
-    display: none;
-  }
-
-  .plus-icon {
-    position: relative;
-    top: auto;
-    right: auto;
-  }
-
-  .calendar-top h3 {
-    font-size: 16px;
-  }
-
-  
-
-
-
-  .appointment-form {
-    width: 90%;
-    max-width: none;
-  }
-
- 
 }

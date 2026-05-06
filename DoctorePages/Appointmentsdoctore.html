@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Styles/Appoinment.css" />
-            <link rel="stylesheet" href="../Styles/Mode.css" />
- 
+    <link rel="stylesheet" href="../Styles/Mode.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -14,12 +14,12 @@
       referrerpolicy="no-referrer"
     />
     <title>Appoinment Doctore</title>
-  </head> 
+  </head>
   <body>
     <aside class="sidebar close">
       <!-- LOGO -->
       <div class="logo" id="sidebarToggle">
-        <img src="../images/Group 53.png" alt="" /> 
+        <img src="../images/Group 53.png" alt="" />
         <span class="logo-text">Iwosan</span>
       </div>
 
@@ -83,21 +83,21 @@
 
     <div class="header">
       <div class="hamburger" id="hamburger">
-  <i class="fa-solid fa-bars"></i>
-</div>
-      <input type="text" placeholder="Search pathology results" />
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <input type="text" placeholder="Search..." />
       <div class="div-icon">
         <i class="fa-regular fa-bell"></i>
       </div>
       <div class="vertical-line"></div>
       <div class="profile-info">
-        <img  id="userImage" src="../images/Portrait of Young Woman.png" />
+        <img id="userImage" src="../images/Portrait of Young Woman.png" />
         <div class="profule-text">
           <h5 id="userName">Menna Fathalla</h5>
           <p id="userRole">Patient</p>
         </div>
       </div>
-    </div>  
+    </div>
 
     <!-- Welcome div -->
     <div class="welcome-mode">
@@ -121,7 +121,7 @@
         </button>
 
         <h3 id="monthYear"></h3>
- 
+
         <button id="nextMonth">
           <i class="fa-solid fa-chevron-right"></i>
         </button>
@@ -138,30 +138,30 @@
         <div class="day-name">Sun</div>
         <!-- days will be generated here -->
       </div>
-    </div> 
+    </div>
 
     <form class="appointment-form">
       <h2>Book an Appointment</h2>
 
-      <div class="form-group"> 
+      <div class="form-group">
         <label for="name">Patient Name *</label>
         <input type="text" id="name" placeholder="Patient Name" required />
-      </div> 
+      </div>
 
       <div class="form-group">
         <label for="department">Department</label>
         <select id="department">
-          <option>Eye Care</option> 
+          <option>Eye Care</option>
           <option>Dental</option>
-          <option>Cardiology</option>  
-          <option>Gyneco</option>  
+          <option>Cardiology</option>
+          <option>Gyneco</option>
           <option>Psycho</option>
           <option>Urologist</option>
           <option>Neurologist</option>
         </select>
       </div>
 
-       <div class="form-group">
+      <div class="form-group">
         <label for="doctor">Doctor</label>
         <select id="doctor">
           <option>Dr. Calvin Carlo</option>
@@ -173,19 +173,19 @@
           <option>Dr. Bertha Magers</option>
         </select>
       </div>
-<div class="form-group">
-  <label for="time">Time *</label>
-  <select id="time" required>
-    <option value="">Select Time</option>
-    <option>09:00 AM</option>
-    <option>10:00 AM</option>
-    <option>11:00 AM</option>
-    <option>12:00 PM</option>
-    <option>02:00 PM</option>
-    <option>04:00 PM</option>
-  </select>
-</div>
-       
+      <div class="form-group">
+        <label for="time">Time *</label>
+        <select id="time" required>
+          <option value="">Select Time</option>
+          <option>09:00 AM</option>
+          <option>10:00 AM</option>
+          <option>11:00 AM</option>
+          <option>12:00 PM</option>
+          <option>02:00 PM</option>
+          <option>04:00 PM</option>
+        </select>
+      </div>
+
       <div class="form-group">
         <label for="phone">Your Phone *</label>
         <input type="tel" id="phone" placeholder="Your Phone" required />
@@ -196,13 +196,13 @@
         <textarea id="comments" placeholder="Your Message" required></textarea>
       </div>
 
-      <button type="submit" class="btn-submit" id="btn-appoinment">Book An Appointment</button>
-    </form> 
-
+      <button type="submit" class="btn-submit" id="btn-appoinment">
+        Book An Appointment
+      </button>
+    </form>
 
     <script src="../Js/Appoinmentdoctore.js"></script>
-      <script src="../Js/Headerdata.js"></script>
-        <script src="../Js/Aside.js"></script> 
+    <script src="../Js/Headerdata.js"></script>
+    <script src="../Js/Aside.js"></script>
   </body>
 </html>
-    

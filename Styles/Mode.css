@@ -16,7 +16,7 @@
 body.dark-mode {
   background: var(--bg-main);
   color: var(--text-main);
-}
+} 
 
 .dark-mode .sidebar {
   background: var(--bg-card);
@@ -496,3 +496,4 @@ input {
   border: 1px solid var(--border-color);
   background-color: var(--bg-main);
 } 
+ 

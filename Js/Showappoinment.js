@@ -1,16 +1,23 @@
-let allPatients = JSON.parse(localStorage.getItem("allPatients")) || [];
+document.addEventListener("DOMContentLoaded", () => {
+  let allPatients = JSON.parse(localStorage.getItem("appointments")) || [];
 
-let tableBody = document.querySelector(".appointment-table tbody");
-tableBody.innerHTML = ""; 
-allPatients.forEach((p) => {
-  tableBody.innerHTML += `
-    <tr>
-      <td data-label="Patient Name">${p.PatientName}</td>
-      <td data-label="Department">${p.Department}</td>
-      <td data-label="Doctor">${p.DoctorName}</td>
-      <td data-label="Time">${p.TimeAppoinment}</td>
-      <td data-label="Phone">${p.Phone}</td>
-      <td data-label="Comments">${p.Comment}</td>
-    </tr>
-  `;
-}); 
+  let tableBody = document.querySelector(".appointment-table tbody");
+
+  let content = "";
+
+  allPatients.forEach((p) => {
+    content += `
+      <tr>
+        <td>${p.patientName}</td>
+        <td>${p.department}</td>
+        <td>${p.doctorName}</td>
+        <td>${p.time}</td>
+        <td>${p.phone}</td>
+        <td>${p.comment}</td>
+      </tr>
+    `;
+  });
+
+  tableBody.innerHTML = content;
+});
+  

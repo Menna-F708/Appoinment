@@ -1,16 +1,15 @@
-
 document.querySelectorAll(".menu a").forEach((link) => {
   link.addEventListener("click", () => {
     sidebar.classList.remove("open");
   });
-}); 
+});
 
 const sidebar = document.querySelector(".sidebar");
 const hamburger = document.getElementById("hamburger");
 
 hamburger.addEventListener("click", () => {
   sidebar.classList.toggle("open");
-}); 
+});
 // diagnostics chart
 const ctx = document.getElementById("diagnosticschart").getContext("2d");
 Chart.register({
@@ -280,3 +279,47 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#appointments"), options);
 chart.render();
+
+let allPatients = JSON.parse(localStorage.getItem("appointments")) || [];
+
+let upcomingContainer = document.querySelector(".upcoming");
+
+if (upcomingContainer) {
+  let content = "";
+
+  allPatients.forEach((p) => {
+    content += `
+      <div class="person">
+        <div class="avatar"></div>
+        <div class="info">
+          <p>${p.patientName}</p>
+<span style="color: ${getDepartmentColor(p.department)}; font-weight: bold; font-size:  0.8rem;">
+        ${p.department} 
+          </span>
+        </div> 
+      </div>
+    `;
+  });
+
+  upcomingContainer.innerHTML = content;
+}
+function getDepartmentColor(dept) {
+  switch (dept) {
+    case "Eye Care":
+      return "#3b82f6";
+    case "Dental":
+      return "#10b981";
+    case "Cardiology":
+      return "#ef4444";
+    case "Gynecologist":
+      return "#f59e0b";
+    case "Psychotherapist":
+      return "#8b5cf6";
+    case "Urologist":
+      return "#14b8a6";
+    case "Neurologist":
+      return "#ec4899";
+    default:
+      return "#4f46e5";
+  }
+}

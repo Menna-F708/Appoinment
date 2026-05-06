@@ -1,26 +1,27 @@
-   <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/Settingsdoctore.css"> 
-        <link rel="stylesheet" href="../Styles/Mode.css">
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../Styles/Mode.css" />
 
-       <link
+    <link rel="stylesheet" href="../Styles/Settingsdoctore.css" />
+ 
+    <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-   <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    /> 
-    <title>Setting</title> 
- </head>
- <body>
-      <aside class="sidebar close">
+    />
+    <title>Setting</title>
+  </head>
+  <body>
+    <aside class="sidebar close">
       <!-- LOGO -->
       <div class="logo" id="sidebarToggle">
         <img src="../images/Group 53.png" alt="" />
@@ -30,7 +31,7 @@
       <!-- MENU -->
       <ul class="menu">
         <li>
-          <a href="./overview.html">
+          <a href="./Overview.html">
             <img src="../images/Group (1).png" />
             <span>Overview</span>
           </a>
@@ -46,7 +47,7 @@
         <li>
           <a href="./Patientsdoctore.html">
             <img src="../images/Grouppatiet.png" />
-            <span>Patient</span>
+            <span>Doctors</span>
           </a>
         </li>
 
@@ -69,7 +70,7 @@
             <img src="../images/Group (7).png" />
             <span>Logout</span>
           </a>
-        </li>  
+        </li>
       </ul>
 
       <!-- EMERGENCY -->
@@ -86,14 +87,17 @@
     </aside>
 
     <div class="header">
-      <input type="text" placeholder="Search pathology results" />
+      <div class="hamburger" id="hamburger">
+  <i class="fa-solid fa-bars"></i>
+</div>
+      <input type="text" placeholder="Search..." />
       <div class="div-icon">
         <i class="fa-regular fa-bell"></i>
       </div>
       <div class="vertical-line"></div>
       <div class="profile-info">
         <img id="userImage" src="../images/Portrait of Young Woman.png" />
-        <div class="profule-text"> 
+        <div class="profule-text">
           <h5 id="userName">Menna Fathalla</h5>
           <p id="userRole">Patient</p>
         </div>
@@ -101,7 +105,7 @@
     </div>
 
     <!-- Welcome div -->
-    <div class="welcome-mode"> 
+    <div class="welcome-mode">
       <div class="welcome-div">
         <p class="name">Setting</p>
       </div>
@@ -113,17 +117,16 @@
           <span class="icon moon">🌙</span>
         </label>
       </div>
-    </div>  
-    <!-- MAIN CONTENT -->  
- 
-       <div class="container-card">
-    <div class="card" id="card-details"></div>
-    <div class="security"><span>Security</span><span>›</span></div>
-  </div>
+    </div>
+    <!-- MAIN CONTENT -->
 
+    <div class="container-card">
+      <div class="card" id="card-details"></div>
+      <div class="security"><span>Security</span><span>›</span></div>
+    </div>
 
-<script src="../Js/Setting.js"></script>
-          <script src="../Js/Headerdata.js"></script>
-        <script src="../Js/Aside.js"></script> 
- </body>
- </html>    
+    <script src="../Js/Setting.js"></script>
+    <script src="../Js/Headerdata.js"></script>
+    <script src="../Js/Aside.js"></script>
+  </body>
+</html>

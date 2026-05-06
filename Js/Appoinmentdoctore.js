@@ -139,7 +139,6 @@ BtnAppoinment.addEventListener("click", (e) => {
 
     appointmentForm.removeAttribute("data-edit-id");
   } else {
-    // ➕ ADD
     const appointmentData = {
       id: Date.now(),
       patientName,

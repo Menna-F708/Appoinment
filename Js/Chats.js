@@ -23,11 +23,9 @@ sendBtn.onclick = () => {
   messages.scrollTop = messages.scrollHeight;
 };
 
-// قراءة اسم الدكتور من الرابط
 const urlParams = new URLSearchParams(window.location.search);
 const doctorName = urlParams.get("doctor");
 
-// عرض الاسم في صفحة الشات
 const doctorTitle = document.getElementById("doctor-name");
 if (doctorTitle && doctorName) {
   doctorTitle.textContent = `${doctorName}`;
